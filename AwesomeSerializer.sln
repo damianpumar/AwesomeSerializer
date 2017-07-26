@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.31101.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeSerializer", "AwesomeSerializer\AwesomeSerializer.csproj", "{7FE80C28-C500-469C-A0DB-1DF19D391F93}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AwesomeSerializer.Tests.Unit", "AwesomeSerializer.Tests.Unit\AwesomeSerializer.Tests.Unit.csproj", "{4448E840-BFD8-4D59-9476-93C719601009}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{7FE80C28-C500-469C-A0DB-1DF19D391F93}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7FE80C28-C500-469C-A0DB-1DF19D391F93}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7FE80C28-C500-469C-A0DB-1DF19D391F93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4448E840-BFD8-4D59-9476-93C719601009}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4448E840-BFD8-4D59-9476-93C719601009}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4448E840-BFD8-4D59-9476-93C719601009}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4448E840-BFD8-4D59-9476-93C719601009}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

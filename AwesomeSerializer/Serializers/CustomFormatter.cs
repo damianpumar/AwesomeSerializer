@@ -14,7 +14,7 @@ namespace AwesomeSerializer.ContractResolvers.Formatters
         private readonly Resolver resolver;
 
         public CustomFormatter()
-            : this(new JsonSerializerSettings { ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore, PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None })
+            : this(new JsonSerializerSettings { ReferenceLoopHandling = ReferenceLoopHandling.Ignore, PreserveReferencesHandling = PreserveReferencesHandling.None })
         {
 
         }
