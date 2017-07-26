@@ -13,19 +13,21 @@ namespace AwesomeSerializer.ContractResolvers.Formatters
 
         private readonly Resolver resolver;
 
+        public CustomFormatter()
+            : this(new JsonSerializerSettings { ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore, PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None })
+        {
+
+        }
+
         public CustomFormatter(Type resolver)
             : this()
         {
             this.resolver = Activator.CreateInstance(resolver) as Resolver;
         }
 
-        public CustomFormatter()
+        public CustomFormatter(JsonSerializerSettings settings)
         {
-            this.jsonSerializerSettings = new JsonSerializerSettings
-            {
-                ReferenceLoopHandling = Newtonsoft.Json.ReferenceLoopHandling.Ignore,
-                PreserveReferencesHandling = Newtonsoft.Json.PreserveReferencesHandling.None
-            };
+            this.jsonSerializerSettings = settings;
 
             this.SupportedMediaTypes.Add(new MediaTypeHeaderValue("application/json"));
 
