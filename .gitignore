@@ -89,6 +89,9 @@ ipch/
 *.vsp
 *.vspx
 
+# AxoCover
+.axoCover/
+
 # Guidance Automation Toolkit
 *.gpState
 

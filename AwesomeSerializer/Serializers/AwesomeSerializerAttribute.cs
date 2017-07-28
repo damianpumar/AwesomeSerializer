@@ -12,9 +12,7 @@ namespace AwesomeSerializer.Serializers
 
         public AwesomeSerializerAttribute(Type resolver)
         {
-            if (resolver.BaseType != typeof(Resolver))
-                throw new ArgumentException("Must be Resolver type.");
-
+            Resolver.CheckResolver(resolver);
             this.resolver = resolver;
         }
 
