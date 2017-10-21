@@ -11,4 +11,13 @@ namespace AwesomeSerializer.Tests.Unit.CustomResolver
             return Enumerable.Empty<IMemberSerialization>();
         }
     }
+
+    public class DummyNestedResolver : Resolver
+    {
+        protected override System.Collections.Generic.IEnumerable<IMemberSerialization> GetMemberNoSerialize()
+        {
+            this.IncludeNestedResolvers(typeof(DummyResolver));
+            return Enumerable.Empty<IMemberSerialization>();
+        }
+    }
 }
