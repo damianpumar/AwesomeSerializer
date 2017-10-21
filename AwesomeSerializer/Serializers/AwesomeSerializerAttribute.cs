@@ -13,6 +13,7 @@ namespace AwesomeSerializer.Serializers
         public AwesomeSerializerAttribute(Type resolver)
         {
             Resolver.CheckResolver(resolver);
+
             this.resolver = resolver;
         }
 

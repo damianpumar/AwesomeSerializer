@@ -11,11 +11,13 @@ namespace AwesomeSerializer.ResolverBase
     public abstract class Resolver : DefaultContractResolver
     {
         private readonly IEnumerable<IMemberSerialization> Serializations;
+
         private readonly List<Resolver> NestedResolvers;
 
         public Resolver()
         {
             this.NestedResolvers = new List<Resolver>();
+
             this.Serializations = this.GetMemberNoSerialize();
         }
 
@@ -65,9 +67,8 @@ namespace AwesomeSerializer.ResolverBase
                     return item.Action == SerializeAction.Serialize;
             }
 
-            return null;    
+            return null;
         }
-
 
         /// <summary>
         /// Add others resolvers to serialization criteria
@@ -78,6 +79,7 @@ namespace AwesomeSerializer.ResolverBase
             foreach (var item in resolvers)
             {
                 CheckResolver(item);
+
                 this.NestedResolvers.Add(Activator.CreateInstance(item) as Resolver);
             }
         }
