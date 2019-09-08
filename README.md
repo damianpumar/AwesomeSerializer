@@ -1,7 +1,7 @@
 # AwesomeSerializer
 
 NuGet package:
-* [AwesomeSerializer](https://preview.nuget.org/packages/AwesomeSerializer/1.0.1)
+* [AwesomeSerializer](https://www.nuget.org/packages/AwesomeSerializer)
 
 PM> Install-Package AwesomeSerializer -Version 1.0.1
 
